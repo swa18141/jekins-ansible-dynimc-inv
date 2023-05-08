@@ -1,17 +1,17 @@
-provider "aws" {
-region = "eu-west-1"
+provider "aws"{
+region="ap-south-1"
+}
+
+resorces"aws_instance" "AWS Instance"{
+	ami=" ami-0fdea1353c525c182"
+	instance_type="t2.micro"
+	key_name="Devops"
+	security_group=["launch-wizard-2"]
+tags={
+Name=tomcatserver
+}
 }
 
 
-resource "aws_instance" "AWSInstance"{
-   ami = "ami-0b04ce5d876a9ba29"
-   instance_type = "t2.micro"
-   key_name = "mithuntechnologiesdevops"
-   security_groups = ["launch-wizard-2"]
-   tags = {
-   Name = "tomcatservers"
-   }
-   
-}
 
 
